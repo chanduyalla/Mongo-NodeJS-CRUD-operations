@@ -1,0 +1,36 @@
+html 
+    head
+    style. 
+        td,th{
+            padding:6px;
+        }
+    body
+        br
+        a(href="/add")
+            button(style="background-color:black;color:white;padding:8px") Add Unicorn 
+        br
+        br
+        table(border=1)(style="border-collapse:collapse")
+            thead(style="background-color:black;color:white;")
+                th Name 
+                th DOB 
+                th Loves 
+                th Weight 
+                th gender 
+                th vampires 
+                th(colspan=2) operatios
+            tbody 
+                each val,i in unicorns 
+                    tr 
+                        td=val.name 
+                        td=val.dob 
+                        td=val.loves 
+                        td=val.weight 
+                        td=val.gender 
+                        td=val.vampires
+                        td
+                            a(href="/edit/"+i)
+                                button(style="background-color:black;color:white;padding:8px") Edit
+                        td 
+                            a(href="/delete/"+i)
+                                button(style="background-color:black;color:white;padding:8px") Delete
